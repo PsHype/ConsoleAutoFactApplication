@@ -5,10 +5,9 @@ using Autofac;
 using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
 using ConsoleAutoFactApplication.Repository;
-using ConsoleAutoFactApplicationTest.Basic.TestComponent;
 using Xunit;
 
-namespace ConsoleAutoFactApplicationTest.Basic
+namespace ConsoleAutoFactApplicationTest.RegisterComponents
 {
     public class ContainerRegisterTest : TestBase
     {

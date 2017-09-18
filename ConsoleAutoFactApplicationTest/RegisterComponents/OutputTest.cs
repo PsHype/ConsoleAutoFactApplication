@@ -1,6 +1,6 @@
 ﻿using ConsoleAutoFactApplication;
 
-namespace ConsoleAutoFactApplicationTest.Basic.TestComponent
+namespace ConsoleAutoFactApplicationTest.RegisterComponents
 {
     public class OutputTest:IOutput
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ConsoleAutoFactApplication;
 
-namespace ConsoleAutoFactApplicationTest.Basic.TestComponent
+namespace ConsoleAutoFactApplicationTest.RelationShipLoader
 {
     public class EnumerableComponent
     {

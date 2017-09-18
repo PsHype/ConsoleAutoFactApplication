@@ -1,4 +1,4 @@
-﻿namespace ConsoleAutoFactApplicationTest.Basic.TestComponent
+﻿namespace ConsoleAutoFactApplicationTest.RegisterComponents
 {
     public class Output1Test
     {

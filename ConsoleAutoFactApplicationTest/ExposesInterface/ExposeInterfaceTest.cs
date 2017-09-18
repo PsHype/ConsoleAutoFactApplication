@@ -4,7 +4,7 @@ using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
 using Xunit;
 
-namespace ConsoleAutoFactApplicationTest.Basic
+namespace ConsoleAutoFactApplicationTest.ExposesInterface
 {
     public class ExposeInterfaceTest : TestBase
     {

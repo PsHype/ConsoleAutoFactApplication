@@ -2,10 +2,9 @@
 using Autofac;
 using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
-using ConsoleAutoFactApplicationTest.Basic.TestComponent;
 using Xunit;
 
-namespace ConsoleAutoFactApplicationTest.Basic
+namespace ConsoleAutoFactApplicationTest.RelationShipLoader
 {
     public class RelationshipLoaderTest : TestBase
     {
