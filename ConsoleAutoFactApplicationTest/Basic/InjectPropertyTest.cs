@@ -1,10 +1,9 @@
 ﻿using Autofac;
 using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
-using ConsoleAutoFactApplicationTest.Basic;
 using Xunit;
 
-namespace ConsoleAutoFactApplicationTest
+namespace ConsoleAutoFactApplicationTest.Basic
 {
     public class PropertyInjectTest : TestBase
     {
@@ -20,13 +19,7 @@ namespace ConsoleAutoFactApplicationTest
             Assert.NotNull(magicTextOutput.MagicText2);
         }
         
-        
-        [Fact]
-        public void PropertyInject_with_circular()
-        {
-//            builder.Register(c => new A()).OnActivated(e => e.Instance.B = e.Context.Resolve<B>());
-        }
-        
+
         [Fact]
         public void PropertyInject_with_reflection_component()
         {

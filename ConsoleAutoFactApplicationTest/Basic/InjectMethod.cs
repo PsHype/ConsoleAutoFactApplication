@@ -3,7 +3,7 @@ using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
 using Xunit;
 
-namespace ConsoleAutoFactApplicationTest
+namespace ConsoleAutoFactApplicationTest.Basic
 {
     public class InjectMethod : TestBase
     {

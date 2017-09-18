@@ -4,7 +4,7 @@ using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
 using Xunit;
 
-namespace ConsoleAutoFactApplicationTest
+namespace ConsoleAutoFactApplicationTest.Basic
 {
     public class ConstructorInjectTest :TestBase
     {
@@ -40,8 +40,6 @@ namespace ConsoleAutoFactApplicationTest
             _output = output;
             Console.Write("hello IOutput");
         }
-        
-        
 
         public ConstructorInjectApplication(IOutput output,ConsoleOutput contnet)
         {

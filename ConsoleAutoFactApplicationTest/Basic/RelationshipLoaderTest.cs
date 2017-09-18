@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Autofac;
 using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
+using ConsoleAutoFactApplicationTest.Basic.TestComponent;
 using Xunit;
 
 namespace ConsoleAutoFactApplicationTest.Basic
@@ -40,16 +40,6 @@ namespace ConsoleAutoFactApplicationTest.Basic
 
             var enumerationComponent = GetContainer().Resolve<EnumerableComponent>();
             Assert.Equal(2,enumerationComponent.Outputs.Count());
-        }
-    }
-
-    public class EnumerableComponent
-    {
-        public IEnumerable<IOutput> Outputs { get; }
-
-        public EnumerableComponent(IEnumerable<IOutput> outputs)
-        {
-            this.Outputs = outputs;
         }
     }
 }

@@ -5,6 +5,7 @@ using Autofac;
 using ConsoleAutoFactApplication;
 using ConsoleAutoFactApplication.OutputImpl;
 using ConsoleAutoFactApplication.Repository;
+using ConsoleAutoFactApplicationTest.Basic.TestComponent;
 using Xunit;
 
 namespace ConsoleAutoFactApplicationTest.Basic
@@ -14,7 +15,6 @@ namespace ConsoleAutoFactApplicationTest.Basic
         [Fact]
         public void RegisterInstance_with_lambda()
         {
-            
             //default register asSelf 
             ContainerBuilder.Register(c => new TextOutput("ping pong"));
             Assert.NotNull(GetContainer().Resolve<TextOutput>());
@@ -29,16 +29,6 @@ namespace ConsoleAutoFactApplicationTest.Basic
 
             Assert.NotNull(GetContainer().Resolve<IOutput>());
         }
-
-
-        [Fact]
-        public void RegisterInstance_ExternallyOwned()
-        {
-            var textOutput = new TextOutput("ping pong");
-            ContainerBuilder.RegisterInstance(textOutput).As<IOutput>().ExternallyOwned();
-            Assert.NotNull(GetContainer().Resolve<IOutput>());
-        }
-
 
         [Fact]
         public void RegisterGeneric()
@@ -82,13 +72,15 @@ namespace ConsoleAutoFactApplicationTest.Basic
             var resolves = GetContainer().Resolve<IEnumerable<IOutput>>();
             Assert.Equal(1, resolves.Count());
             Assert.NotNull(resolves);
-        }
-
+            
 //        ContainerBuilder.RegisterType<MagicTextOutput>()
 //        .As<IOutput>()
 //        .OnlyIf(reg =>
 //        reg.IsRegistered(new ConsoleOutput())) &&
 //        reg.IsRegistered(new TypedService(typeof(HandlerB))));
+        }
+
+
 
         [Fact]
         public void Scan_component()
@@ -103,8 +95,7 @@ namespace ConsoleAutoFactApplicationTest.Basic
             var o = GetContainer().Resolve<IEnumerable<IOutput>>();
             Assert.NotNull(o);
 
-            var output1Test = GetContainer().Resolve<Output1Test>();
-            Assert.NotNull(output1Test);
+            Assert.NotNull(GetContainer().Resolve<Output1Test>());
         }
     }
 }

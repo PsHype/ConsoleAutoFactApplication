@@ -55,13 +55,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basic\ContainerRegisterTest.cs" />
-    <Compile Include="Basic\Output1Test.cs" />
     <Compile Include="Basic\RelationshipLoaderTest.cs" />
     <Compile Include="Basic\ExposeInterfaceTest.cs" />
     <Compile Include="Basic\InjectConstructorTest.cs" />
     <Compile Include="Basic\InjectMethod.cs" />
     <Compile Include="Basic\InjectPropertyTest.cs" />
-    <Compile Include="Basic\OutputTest.cs" />
+    <Compile Include="Basic\TestComponent\EnumerableComponent.cs" />
+    <Compile Include="Basic\TestComponent\Output1Test.cs" />
+    <Compile Include="Basic\TestComponent\OutputTest.cs" />
     <Compile Include="LifetimeScopes\LifeTimeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBase.cs" />
