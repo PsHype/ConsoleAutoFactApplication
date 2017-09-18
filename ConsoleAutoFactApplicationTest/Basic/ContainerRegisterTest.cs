@@ -95,14 +95,16 @@ namespace ConsoleAutoFactApplicationTest.Basic
         {
             var executingAssembly = Assembly.GetExecutingAssembly();
             ContainerBuilder.RegisterAssemblyTypes(executingAssembly)
-                .Where(t => t.Name.EndsWith("OutputTest"))
+                .Where(t => t.Name.EndsWith("Test"))
 //                .Except()
                 .AsImplementedInterfaces()
                 .AsSelf();
-//                .As<IOutput>();
 
-            Assert.NotNull(GetContainer().Resolve<IOutput>());
-            Assert.NotNull(GetContainer().Resolve<OutputTest>());
+            var o = GetContainer().Resolve<IEnumerable<IOutput>>();
+            Assert.NotNull(o);
+
+            var output1Test = GetContainer().Resolve<Output1Test>();
+            Assert.NotNull(output1Test);
         }
     }
 }

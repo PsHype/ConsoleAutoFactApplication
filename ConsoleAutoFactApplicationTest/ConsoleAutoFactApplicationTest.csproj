@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basic\ContainerRegisterTest.cs" />
+    <Compile Include="Basic\Output1Test.cs" />
     <Compile Include="Basic\RelationshipLoaderTest.cs" />
     <Compile Include="Basic\ExposeInterfaceTest.cs" />
     <Compile Include="Basic\InjectConstructorTest.cs" />
