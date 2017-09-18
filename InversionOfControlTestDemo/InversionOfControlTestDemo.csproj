@@ -57,14 +57,14 @@
     <Compile Include="Denpendency_Injection\AutoFactMovieFindService.cs" />
     <Compile Include="Denpendency_Injection\AutoFactMovieFindServiceTest.cs" />
     <Compile Include="Denpendency_Injection\HashMapMovieFinder.cs" />
+    <Compile Include="Denpendency_LookUp\ServiceLocatorMovieFindServiceTest.cs" />
+    <Compile Include="Denpendency_LookUp\ServiceLocator.cs" />
+    <Compile Include="Denpendency_LookUp\ServiceLocatorMovieFindService.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieFinder.cs" />
     <Compile Include="MovieFindService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TxtFileMovieFinder.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Denpendency_LookUp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

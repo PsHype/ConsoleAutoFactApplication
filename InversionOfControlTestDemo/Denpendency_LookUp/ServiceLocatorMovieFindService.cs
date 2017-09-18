@@ -1,20 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace InversionOfControlTestDemo
+namespace InversionOfControlTestDemo.Denpendency_LookUp
 {
-    public class MovieFindService
+
+    public class ServiceLocatorMovieFindService
     {
-        //最大的问题是service 依赖了_movieFinder的具体实现
-        private readonly MovieFinder _movieFinder;
-
-        public MovieFindService()
-        {
-            _movieFinder = new TxtFileMovieFinder("C://movies.txt");
-        }
-
         public List<Movie> GetMoviesDirectedBy(string directorName)
         {
-            List<Movie> allMovies = _movieFinder.findAll();
+            List<Movie> allMovies = ServiceLocator.GetMoveFinder().findAll();
             var directorMovies = new List<Movie>();
             foreach (var movie in allMovies)
             {
