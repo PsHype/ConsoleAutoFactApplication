@@ -2,7 +2,7 @@
 
 namespace InversionOfControlTestDemo.Denpendency_Injection
 {
-    //    依赖注入的最大好处在于：它消除了MovieLister类对具体MovieFinder实现类的依赖
+    //    依赖注入的最大好处在于：它消除了MovieFinder类对具体MovieFinder实现类的依赖
     public class AutoFactMovieFindService
     {
         private readonly MovieFinder _movieFinder;
